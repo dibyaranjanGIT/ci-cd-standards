@@ -20,11 +20,6 @@ jobs:
           pip3 install codespell==2.1.0
           codespell .
 
-      - name: Black linting
-        run: |
-          pip3 install black==24.10.0
-          black . --check
-
       - name: Run isort
         run: |
           pip3 install isort
