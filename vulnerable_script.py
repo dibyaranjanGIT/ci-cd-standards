@@ -9,10 +9,11 @@ import json
 import os
 import sys
 from collections import defaultdict
-from database.models import User
 from datetime import datetime
-from flask import Flask
 from math import sqrt
+
+from database.models import User
+from flask import Flask
 from services.calculator import calculate_area
 from utils.helper import format_date
 
