@@ -7,34 +7,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-uses: actions/checkout@v2
-name: Check docstyle
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Check docstyle
         run: |
-           pip3 install pydocstyle==6.1.1
-           pydocstyle --match=".*\.py"
-        continue-on-error: false
-name: spell-check
-        id: spell-check
+          pip3 install pydocstyle==6.1.1
+          pydocstyle --match=".*\.py"
+
+      - name: Spell-check
         run: |
-                pip3 install codespell==2.1.0
-                codespell .
-        continue-on-error: false
-name: black-linting
-        id: compliance
+          pip3 install codespell==2.1.0
+          codespell .
+
+      - name: Black linting
         run: |
-                pip3 install black==24.10.0
-                black . --check
-        continue-on-error: false
-name: Run isort
-        id: compliancesecond
+          pip3 install black==24.10.0
+          black . --check
+
+      - name: Run isort
         run: |
-                pip3 install isort
-                isort . --check-only
-        continue-on-error: false
-      
-name: Run Flake8
-        id: flaketest
+          pip3 install isort
+          isort . --check-only
+
+      - name: Run Flake8
         run: |
-                pip3 install flake8
-                flake8 . --max-line-length=100 --show-source
-        continue-on-error: false
+          pip3 install flake8
+          flake8 . --max-line-length=100 --show-source
