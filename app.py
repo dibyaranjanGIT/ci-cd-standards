@@ -4,6 +4,18 @@ Validate best practices using GitHub Actions.
 
 This script will check the result of the action.
 """
+from services.calculator import calculate_area
+import os
+import numpy as np
+import jsonx
+from database.models import User
+from datetime import datetime
+import sys
+from utils.helper import format_date
+from flask import Flask
+from collections import defaultdict
+from math import sqrt
+
 
 # Explicitly hardcoded sensitive data
 API_KEY = "AIzaSyD-EXAMPLE1234567890abcdefgHIJKLM"
