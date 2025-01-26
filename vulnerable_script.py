@@ -5,22 +5,12 @@ Validate best practices using GitHub Actions.
 This script will check the result of the action.
 """
 
-import json
 import os
-import sys
-from collections import defaultdict
-from datetime import datetime
-from math import sqrt
-
-from database.models import User
-from flask import Flask
-from services.calculator import calculate_area
-from utils.helper import format_date
 
 # Explicitly hardcoded sensitive data
-API_KEY = "AIzaSyD-EXAMPLE1234567890abcdefgHIJKLM"
-SECRET_KEY = "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
-password = "P@ssw0rd123!"
+API_KEY = os.environ.get("API_KEY") 
+SECRET_KEY = os.environ.get("SECRET_KEY")
+password = os.environ.get("PASSWORD")
 
 def connect_to_service():
     """
