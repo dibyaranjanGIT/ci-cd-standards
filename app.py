@@ -9,7 +9,7 @@ SECRET_KEY = "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
 password="P@ssw0rd123!"
 
 def connect_to_service():
-    """ 
+    """
     Add function to connect to servie.
     No input only print function.
     """
