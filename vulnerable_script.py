@@ -8,9 +8,10 @@ This script will check the result of the action.
 import os
 
 # Explicitly hardcoded sensitive data
-API_KEY = os.environ.get("API_KEY") 
+API_KEY = os.environ.get("API_KEY")
 SECRET_KEY = os.environ.get("SECRET_KEY")
 password = os.environ.get("PASSWORD")
+
 
 def connect_to_service():
     """
