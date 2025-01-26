@@ -1,6 +1,7 @@
 # File: vulnerable_script.py
 """
 Validate best practices using GitHub Actions.
+
 This script will check the result of the action.
 """
 
